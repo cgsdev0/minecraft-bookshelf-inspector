@@ -1,8 +1,8 @@
 api-version: '1.21'
-name: paperweight-test-plugin
+name: bookshelf-inspector
 version: 1.0.0-SNAPSHOT
-main: io.papermc.paperweight.testplugin.TestPlugin
-description: Test plugin for paperweight-userdev
+main: dev.cgs.bookshelfinspector.BookshelfPlugin
+description: Tooltips for chiseled bookshelves on action bar
 load: STARTUP
 authors:
-- Author
+- cgsdev0
