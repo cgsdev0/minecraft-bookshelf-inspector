@@ -7,9 +7,9 @@ plugins {
   id("xyz.jpenilla.resource-factory-bukkit-convention") version "1.2.0" // Generates plugin.yml based on the Gradle config
 }
 
-group = "io.papermc.paperweight"
+group = "dev.cgs.bookshelfinspector"
 version = "1.0.0-SNAPSHOT"
-description = "Test plugin for paperweight-userdev"
+description = "Tooltips for chiseled bookshelves on the action bar"
 
 java {
   // Configure the java toolchain. This allows gradle to auto-provision JDK 21 on systems that only have JDK 11 installed for example.
@@ -58,8 +58,8 @@ tasks {
 // Configure plugin.yml generation
 // - name, version, and description are inherited from the Gradle project.
 bukkitPluginYaml {
-  main = "io.papermc.paperweight.testplugin.TestPlugin"
+  main = "dev.cgs.bookshelfinspector.BookshelfPlugin"
   load = BukkitPluginYaml.PluginLoadOrder.STARTUP
-  authors.add("Author")
+  authors.add("cgsdev0")
   apiVersion = "1.21"
 }
