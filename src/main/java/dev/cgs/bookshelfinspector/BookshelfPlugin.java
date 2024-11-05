@@ -1,4 +1,4 @@
-package io.papermc.paperweight.testplugin;
+package dev.cgs.bookshelfinspector;
 
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -29,7 +29,7 @@ import net.kyori.adventure.text.TextComponent;
 import java.util.Map;
 
 @DefaultQualifier(NonNull.class)
-public final class TestPlugin extends JavaPlugin implements Listener {
+public final class BookshelfPlugin extends JavaPlugin implements Listener {
 
   public static Vector2d project(Vector v, BlockFace face) {
     switch(face) {
@@ -80,7 +80,7 @@ public final class TestPlugin extends JavaPlugin implements Listener {
                 Vector origin = b.getLocation().toVector();
                 Vector pos = result.getHitPosition();
                 Vector diff = pos.multiply(-1.0).add(origin);
-                int slot = TestPlugin.slot(TestPlugin.project(diff, face));
+                int slot = BookshelfPlugin.slot(BookshelfPlugin.project(diff, face));
                 if (!data.isSlotOccupied(slot)) continue;
                 ChiseledBookshelfInventory inv = state.getInventory();
                 ItemStack item = inv.getItem(slot);
